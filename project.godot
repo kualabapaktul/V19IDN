@@ -1,10 +1,7 @@
-[gd_project]
+[gd_resource type="ProjectSettings" format=3]
 config_version=4
-
-[application]
-config/name="Voyager-19 (Kreasi anak indonesia)"
+_application/name="Voyager-19 (Kreasi Anak Indonesia)"
+_application/config/name="Voyager-19"
 run/main_scene="res://Main.tscn"
-config/icon="res://icon.png"
-
-[rendering]
-quality/2d/use_nvidia_rect_flicker_workaround=true
+config/display/window/size/viewport_width = 480
+config/display/window/size/viewport_height = 270
