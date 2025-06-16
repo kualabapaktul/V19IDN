@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3]
+
+[node name="Spaceship" type="CharacterBody2D"]
+position = Vector2(200, 400)
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = null
