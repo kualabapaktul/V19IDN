@@ -1,0 +1,35 @@
+name: Build Android APK
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Godot
+        uses: firebelley/setup-godot@v2
+        with:
+          godot-version: '4.2.1'
+          export-templates: true
+
+      - name: Export Android
+        run: |
+          echo "[preset.0]" > export_presets.cfg
+          echo "name=\"Android\"" >> export_presets.cfg
+          echo "platform=\"Android\"" >> export_presets.cfg
+          echo "runnable=true" >> export_presets.cfg
+          godot --export "Android" Voyager-19.apk
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: voyager19-apk
+          path: Voyager-19.apk
+          
