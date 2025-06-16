@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3]
+
+[node name="PlanetEgg" type="Area2D"]
+position = Vector2(600, 500)
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = null
